@@ -1,0 +1,205 @@
+<style>
+  .header {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  h1 {
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    background: linear-gradient(to right, #ffffff, #f0f0f0);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  .subtitle {
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 15px;
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .content-box {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    z-index: 10;
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: space-evenly;
+  }
+
+  .content-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  }
+
+  h2 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #fdbb2d;
+    text-align: center;
+  }
+
+  .comparison-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  .comparison-card {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .comparison-card.good {
+    border-color: #2ecc71;
+  }
+
+  .comparison-card.bad {
+    border-color: #e74c3c;
+  }
+
+  .comparison-card i {
+    font-size: 60px;
+    margin-bottom: 15px;
+  }
+
+  .comparison-card.good i {
+    color: #2ecc71;
+  }
+
+  .comparison-card.bad i {
+    color: #e74c3c;
+  }
+
+  .comparison-card h3 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .comparison-card ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    width: 80%;
+  }
+
+  .comparison-card li {
+    font-size: 20px;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+  }
+
+  .comparison-card li i {
+    font-size: 20px;
+    margin-right: 10px;
+    width: auto;
+  }
+
+  .decorative-circle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    z-index: 1;
+  }
+
+  .circle-1 {
+    width: 300px;
+    height: 300px;
+    top: -100px;
+    left: -100px;
+  }
+
+  .circle-2 {
+    width: 200px;
+    height: 200px;
+    bottom: 50px;
+    right: 100px;
+  }
+
+  .circle-3 {
+    width: 150px;
+    height: 150px;
+    top: 200px;
+    right: -50px;
+  }
+
+  .footer {
+    text-align: center;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.7);
+    z-index: 10;
+    margin-top: 15px;
+  }
+</style>
+<!-- Decorative elements -->
+<div class="decorative-circle circle-1"></div>
+<div class="decorative-circle circle-2"></div>
+<div class="decorative-circle circle-3"></div>
+
+<!-- Header -->
+<div class="header">
+  <h1>Good vs Bad CSS</h1>
+  <div class="subtitle">
+    Understanding best practices for maintainable stylesheets
+  </div>
+</div>
+
+<!-- Main content -->
+<div class="content-box">
+  <h2>Side-by-Side Comparison</h2>
+
+  <div class="comparison-container">
+    <div class="comparison-card good">
+      <i class="fas fa-check-circle"></i>
+      <h3>Good CSS</h3>
+      <ul>
+        <li><i class="fas fa-leaf"></i> Clean & Readable</li>
+        <li><i class="fas fa-sitemap"></i> Organized Structure</li>
+        <li><i class="fas fa-tools"></i> Easy to Maintain</li>
+        <li><i class="fas fa-arrows-alt-h"></i> Scalable for Growth</li>
+      </ul>
+    </div>
+
+    <div class="comparison-card bad">
+      <i class="fas fa-times-circle"></i>
+      <h3>Bad CSS</h3>
+      <ul>
+        <li><i class="fas fa-exclamation-triangle"></i> Messy & Confusing</li>
+        <li><i class="fas fa-random"></i> Disorganized</li>
+        <li><i class="fas fa-wrench"></i> Hard to Maintain</li>
+        <li><i class="fas fa-compress"></i> Not Scalable</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  <p>Strive for clean, organized, and maintainable CSS in all your projects</p>
+</div>

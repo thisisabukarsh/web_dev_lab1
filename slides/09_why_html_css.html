@@ -1,0 +1,223 @@
+<style>
+  .header {
+    position: relative;
+    z-index: 10;
+  }
+
+  h1 {
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    background: linear-gradient(to right, #ffffff, #f0f0f0);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  .subtitle {
+    font-size: 28px;
+    font-weight: 300;
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+  }
+
+  .building-blocks {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    /* max-width: 900px; */
+    min-width: 900px;
+  }
+
+  .block {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .block:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  }
+
+  .block-icon {
+    font-size: 60px;
+    margin-bottom: 20px;
+    color: #fdbb2d;
+  }
+
+  .block h2 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: white;
+  }
+
+  .block p {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  .approach-box {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin-top: 40px;
+    text-align: center;
+    max-width: 900px;
+  }
+
+  .approach-box:hover {
+    transform: scale(1.02);
+  }
+
+  .approach-box h2 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #fdbb2d;
+  }
+
+  .approach-box p {
+    font-size: 20px;
+    line-height: 1.5;
+  }
+
+  .decorative-circle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    z-index: 1;
+  }
+
+  .circle-1 {
+    width: 300px;
+    height: 300px;
+    top: -100px;
+    left: -100px;
+  }
+
+  .circle-2 {
+    width: 200px;
+    height: 200px;
+    bottom: 50px;
+    right: 100px;
+  }
+
+  .circle-3 {
+    width: 150px;
+    height: 150px;
+    top: 200px;
+    right: -50px;
+  }
+
+  .footer {
+    text-align: center;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.7);
+    z-index: 10;
+  }
+
+  .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+  }
+
+  .image-container img {
+    max-height: 120px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+  }
+
+  .image-container img:hover {
+    transform: scale(1.05);
+  }
+</style>
+<!-- Decorative elements -->
+<div class="decorative-circle circle-1"></div>
+<div class="decorative-circle circle-2"></div>
+<div class="decorative-circle circle-3"></div>
+
+<!-- Header -->
+<div class="header">
+  <h1>Why Start with HTML → CSS</h1>
+  <div class="subtitle">Building a solid foundation for web development</div>
+</div>
+
+<!-- Main content -->
+<div class="main-content">
+  <div class="flex flex-col items-center">
+    <div class="building-blocks">
+      <div class="block">
+        <i class="fas fa-code block-icon"></i>
+        <h2>HTML</h2>
+        <p>Structure</p>
+        <div class="image-container">
+          <img src="\src\images\html.png" alt="HTML Structure" />
+        </div>
+      </div>
+
+      <div class="block">
+        <i class="fas fa-paint-brush block-icon"></i>
+        <h2>CSS</h2>
+        <p>Style</p>
+        <div class="image-container">
+          <img src="\src\images\css.png" alt="CSS Style" />
+        </div>
+      </div>
+
+      <div class="block">
+        <i class="fab fa-js block-icon"></i>
+        <h2>JavaScript</h2>
+        <p>Behavior (later)</p>
+        <div class="image-container">
+          <img src="\src\images\js.png" alt="JavaScript" />
+        </div>
+      </div>
+    </div>
+    <!-- 
+    <div class="approach-box">
+      <h2>Foundation-first Approach</h2>
+      <p>
+        Just like building a house, we start with the structure (HTML), add
+        style (CSS), and then add functionality (JavaScript).
+      </p>
+      <p>
+        This approach ensures you understand the core principles before adding
+        complexity.
+      </p>
+    </div> -->
+  </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  <p>
+    Master the fundamentals first, and the advanced concepts will be easier to
+    grasp
+  </p>
+</div>

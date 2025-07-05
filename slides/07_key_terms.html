@@ -1,0 +1,156 @@
+<style>
+  .header {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    background: linear-gradient(to right, #ffffff, #f0f0f0);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  .subtitle {
+    font-size: 28px;
+    font-weight: 300;
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .content-box {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    z-index: 10;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .content-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  }
+
+  h2 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    color: #fdbb2d;
+    text-align: center;
+  }
+
+  .key-terms-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .key-terms-list li {
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+  }
+
+  .key-terms-list li:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(10px);
+  }
+
+  .key-terms-list li i {
+    margin-right: 20px;
+    font-size: 30px;
+    color: #fdbb2d;
+    width: 40px;
+    text-align: center;
+  }
+
+  .decorative-circle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    z-index: 1;
+  }
+
+  .circle-1 {
+    width: 300px;
+    height: 300px;
+    top: -100px;
+    left: -100px;
+  }
+
+  .circle-2 {
+    width: 200px;
+    height: 200px;
+    bottom: 50px;
+    right: 100px;
+  }
+
+  .circle-3 {
+    width: 150px;
+    height: 150px;
+    top: 200px;
+    right: -50px;
+  }
+
+  .footer {
+    text-align: center;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.7);
+    z-index: 10;
+  }
+</style>
+<!-- Decorative elements -->
+<div class="decorative-circle circle-1"></div>
+<div class="decorative-circle circle-2"></div>
+<div class="decorative-circle circle-3"></div>
+
+<!-- Header -->
+<div class="header">
+  <h1>Key Terms</h1>
+  <div class="subtitle">Essential vocabulary for understanding the web</div>
+</div>
+
+<!-- Main content -->
+<div class="content-box">
+  <h2>Understanding the Core Concepts</h2>
+
+  <ul class="key-terms-list">
+    <li>
+      <i class="fas fa-globe"></i>
+      <span>DNS (Domain Name System)</span>
+    </li>
+    <li>
+      <i class="fas fa-cloud"></i>
+      <span>Hosting</span>
+    </li>
+    <li>
+      <i class="fas fa-lock"></i>
+      <span>HTTP , HTTPS</span>
+    </li>
+    <li>
+      <i class="fas fa-server"></i>
+      <span>Domain </span>
+    </li>
+  </ul>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  <p>These terms are the building blocks of how the internet works</p>
+</div>

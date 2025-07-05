@@ -1,0 +1,159 @@
+<style>
+  .header {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  h1 {
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    background: linear-gradient(to right, #ffffff, #f0f0f0);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  .subtitle {
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 15px;
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .content-box {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    z-index: 10;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: space-evenly;
+  }
+
+  .content-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  }
+
+  h2 {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    color: #fdbb2d;
+    text-align: center;
+  }
+
+  .project-goals-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+  }
+
+  .project-goals-list li {
+    font-size: 28px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+  }
+
+  .project-goals-list li:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(10px);
+  }
+
+  .project-goals-list li i {
+    margin-right: 20px;
+    font-size: 36px;
+    color: #2ecc71;
+    width: 50px;
+    text-align: center;
+  }
+
+  .decorative-circle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    z-index: 1;
+  }
+
+  .circle-1 {
+    width: 300px;
+    height: 300px;
+    top: -100px;
+    left: -100px;
+  }
+
+  .circle-2 {
+    width: 200px;
+    height: 200px;
+    bottom: 50px;
+    right: 100px;
+  }
+
+  .circle-3 {
+    width: 150px;
+    height: 150px;
+    top: 200px;
+    right: -50px;
+  }
+
+  .footer {
+    text-align: center;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.7);
+    z-index: 10;
+    margin-top: 15px;
+  }
+</style>
+
+<!-- Decorative elements -->
+<div class="decorative-circle circle-1"></div>
+<div class="decorative-circle circle-2"></div>
+<div class="decorative-circle circle-3"></div>
+
+<!-- Header -->
+<div class="header">
+  <h1>Project Goal</h1>
+  <div class="subtitle">Building first mini-website</div>
+</div>
+
+<!-- Main content -->
+<div class="content-box">
+  <h2>First Mini-Website Project</h2>
+
+  <ul class="project-goals-list">
+    <li>
+      <i class="fas fa-file-code"></i>
+      <span>Build a basic 1-page site</span>
+    </li>
+    <li>
+      <i class="fas fa-sitemap"></i>
+      <span>Include Header, Content, and Footer sections</span>
+    </li>
+    <li>
+      <i class="fas fa-paint-brush"></i>
+      <span>Apply structure and styling learned today</span>
+    </li>
+  </ul>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  <p>Apply your new skills to create a tangible web page!</p>
+</div>

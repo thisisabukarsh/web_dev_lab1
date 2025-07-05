@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Web Development Presentation</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/css/styles.css" />
+  </head>
+  <body>
+    <div class="slide-container">
+      <div
+        id="slide-navigator"
+        class="flex flex-wrap gap-2 justify-center mt-1 z-50"
+      ></div>
+      <div id="slide-content"></div>
+    </div>
+    <div class="navigation-buttons">
+      <button class="nav-button" id="prev-btn">Previous</button>
+      <button class="nav-button" id="next-btn">Next</button>
+    </div>
+    <script src="src/js/main.js"></script>
+  </body>
+</html>

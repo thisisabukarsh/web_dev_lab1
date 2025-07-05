@@ -1,0 +1,326 @@
+<style>
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: linear-gradient(120deg, #1a2a6c, #b21f1f, #fdbb2d);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    color: #fff;
+    min-height: 100vh;
+  }
+
+  .header {
+    text-align: center;
+    padding: 40px 20px 20px;
+    z-index: 10;
+    position: relative;
+  }
+
+  h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin: 0;
+    background: linear-gradient(to right, #ffffff, #f0f0f0);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientAnimation 10s ease infinite;
+    background-size: 200% auto;
+    text-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+
+  .main-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    padding: 30px 20px;
+    z-index: 10;
+    position: relative;
+  }
+
+  .method-box {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    position: relative;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .method-box:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+  }
+
+  .method-number {
+    position: absolute;
+    top: -18px;
+    left: -18px;
+    width: 45px;
+    height: 45px;
+    background: #fdbb2d;
+    color: #1a2a6c;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  h2 {
+    font-size: 22px;
+    color: #fdbb2d;
+    margin: 12px 0 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  p {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+
+  .code-block {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 15px;
+    font-family: "Courier New", monospace;
+    font-size: 14px;
+    color: #f8f9fa;
+    overflow-x: auto;
+    margin-top: auto;
+  }
+
+  .pros-cons {
+    margin-top: 12px;
+  }
+
+  .pros-cons div {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 6px;
+  }
+
+  .pro i {
+    color: #2ecc71;
+    margin-right: 8px;
+  }
+
+  .con i {
+    color: #e74c3c;
+    margin-right: 8px;
+  }
+
+  .footer {
+    text-align: center;
+    font-size: 15px;
+    padding: 15px;
+    margin: 40px 20px 20px;
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+    backdrop-filter: blur(8px);
+    z-index: 10;
+    position: relative;
+  }
+
+  .decorative-circle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.07);
+    z-index: 1;
+  }
+
+  .circle-1 {
+    width: 300px;
+    height: 300px;
+    top: -100px;
+    left: -100px;
+  }
+
+  .circle-2 {
+    width: 200px;
+    height: 200px;
+    bottom: 60px;
+    right: 100px;
+  }
+
+  /* Syntax Highlighting */
+  .tag {
+    color: #61dafb;
+  }
+
+  .attribute {
+    color: #f8c555;
+  }
+
+  .value {
+    color: #98c379;
+  }
+
+  .selector {
+    color: #61dafb;
+  }
+
+  .property {
+    color: #f8c555;
+  }
+
+  .comment {
+    color: #6c757d;
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  @media (max-width: 600px) {
+    h1 {
+      font-size: 2rem;
+    }
+
+    .method-number {
+      width: 38px;
+      height: 38px;
+      font-size: 16px;
+    }
+  }
+</style>
+
+<!-- Decorative elements -->
+<div class="decorative-circle circle-1"></div>
+<div class="decorative-circle circle-2"></div>
+
+<!-- Header -->
+<div class="header">
+  <h1>CSS: Three Ways to Style</h1>
+</div>
+
+<!-- Main content -->
+<div class="main-content">
+  <div class="method-box" style="position: relative">
+    <div class="method-number">1</div>
+    <h2><i class="fas fa-code"></i> Inline CSS</h2>
+    <p>Applied directly to individual HTML elements</p>
+
+    <!-- <div class="image-container">
+      <img
+        src="/home/ubuntu/upload/search_images/XpWaErXWhhc6.jpg"
+        alt="Inline CSS Example"
+      />
+    </div> -->
+
+    <div class="code-block">
+      <span class="tag">&lt;p</span> <span class="attribute">style=</span
+      ><span class="value">"color: blue; font-size: 16px; margin: 10px;"</span
+      ><span class="tag">&gt;</span>
+      This is blue text
+      <span class="tag">&lt;/p&gt;</span>
+    </div>
+
+    <div class="pros-cons">
+      <div class="pro">
+        <i class="fas fa-plus-circle"></i> Quick for single elements
+      </div>
+      <div class="con"><i class="fas fa-minus-circle"></i> Not reusable</div>
+      <div class="con">
+        <i class="fas fa-minus-circle"></i> Hard to maintain
+      </div>
+    </div>
+  </div>
+
+  <div class="method-box" style="position: relative">
+    <div class="method-number">2</div>
+    <h2><i class="fas fa-file-code"></i> Internal CSS</h2>
+    <p>Defined in the head section of HTML</p>
+
+    <!-- <div class="image-container">
+      <img
+        src="/home/ubuntu/upload/search_images/nkMpgNg5vT9h.jpg"
+        alt="Internal CSS Example"
+      />
+    </div> -->
+
+    <div class="code-block">
+      <span class="tag">&lt;style&gt;</span>
+      <span class="selector">p</span> { <span class="property">color</span>:
+      <span class="value">blue</span>; <span class="property">font-size</span>:
+      <span class="value">16px</span>; } <span class="selector">h1</span> {
+      <span class="property">color</span>: <span class="value">red</span>; }
+      <span class="tag">&lt;/style&gt;</span>
+    </div>
+
+    <div class="pros-cons">
+      <div class="pro">
+        <i class="fas fa-plus-circle"></i> Works for one page
+      </div>
+      <div class="pro">
+        <i class="fas fa-plus-circle"></i> Reusable within page
+      </div>
+      <div class="con">
+        <i class="fas fa-minus-circle"></i> Not for multiple pages
+      </div>
+    </div>
+  </div>
+
+  <div class="method-box" style="position: relative">
+    <div class="method-number">3</div>
+    <h2><i class="fas fa-file-alt"></i> External CSS</h2>
+    <p>Separate CSS file linked to HTML</p>
+
+    <!-- <div class="image-container">
+      <i class="fas fa-file-alt" style="font-size: large"></i>
+    </div> -->
+
+    <div class="code-block">
+      <span class="comment">/* In HTML file */</span>
+      <span class="tag">&lt;link</span> <span class="attribute">rel=</span
+      ><span class="value">"stylesheet"</span>
+      <span class="attribute">href=</span><span class="value">"styles.css"</span
+      ><span class="tag">&gt;</span>
+
+      <span class="comment">/* In styles.css */</span>
+      <span class="selector">p</span> { <span class="property">color</span>:
+      <span class="value">blue</span>; }
+    </div>
+
+    <div class="pros-cons">
+      <div class="pro">
+        <i class="fas fa-plus-circle"></i> Reusable across site
+      </div>
+      <div class="pro">
+        <i class="fas fa-plus-circle"></i> Better organization
+      </div>
+      <div class="pro">
+        <i class="fas fa-plus-circle"></i> Faster page loading
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  <p>
+    <i class="fas fa-star"></i> <strong>Best Practice:</strong> Use external CSS
+    files for maintainable, scalable websites
+  </p>
+</div>

@@ -1,0 +1,98 @@
+<style>
+  .header {
+    text-align: center;
+    padding: 40px 20px 20px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    background: linear-gradient(to right, #ffffff, #f0f0f0);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .gridbox-slide {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .slide-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #fdbb2d;
+  }
+
+  .grid-container {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 20px;
+    border: 2px dashed #fdbb2d;
+    border-radius: 12px;
+    min-height: 120px;
+
+    /* 👇 Grid properties */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    place-items: center;
+  }
+
+  .grid-item {
+    background: #fdbb2d;
+    color: #1a2a6c;
+    font-weight: bold;
+    padding: 15px 20px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+  }
+
+  .code-block {
+    margin-top: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 8px;
+    font-family: monospace;
+    font-size: 14px;
+    color: #f8f9fa;
+  }
+
+  .footer {
+    text-align: center;
+    font-size: 14px;
+    margin: 40px 0;
+  }
+</style>
+
+<div class="header">
+  <h1>CSS Grid Visual Playground</h1>
+</div>
+
+<!-- Slide: Grid Columns -->
+<div class="gridbox-slide">
+  <div class="slide-title">
+    grid-template-columns: <code>repeat(3, 1fr)</code>
+  </div>
+  <div class="grid-container">
+    <div class="grid-item">1</div>
+    <div class="grid-item">2</div>
+    <div class="grid-item">3</div>
+  </div>
+  <div class="code-block">
+    .grid-container {<br />
+    &nbsp;&nbsp;display: grid;<br />
+    &nbsp;&nbsp;grid-template-columns: repeat(3, 1fr);<br />
+    &nbsp;&nbsp;gap: 10px;<br />
+    &nbsp;&nbsp;place-items: center;<br />
+    }
+  </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  <i class="fas fa-info-circle"></i> Modify the properties to test grid behavior
+  visually!
+</div>

@@ -1,0 +1,183 @@
+<style>
+  .header {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  h1 {
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    background: linear-gradient(to right, #ffffff, #f0f0f0);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  .subtitle {
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 15px;
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .content-box {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    z-index: 10;
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: space-evenly;
+  }
+
+  .content-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  }
+
+  h2 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #fdbb2d;
+    text-align: center;
+  }
+
+  .topics-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  .topic-category {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .topic-category h3 {
+    font-size: 28px;
+    color: #fdbb2d;
+    margin-bottom: 15px;
+  }
+
+  .topic-category ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+  }
+
+  .topic-category li {
+    font-size: 22px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+  }
+
+  .topic-category li i {
+    margin-right: 15px;
+    font-size: 28px;
+    color: #2ecc71;
+  }
+
+  .decorative-circle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    z-index: 1;
+  }
+
+  .circle-1 {
+    width: 300px;
+    height: 300px;
+    top: -100px;
+    left: -100px;
+  }
+
+  .circle-2 {
+    width: 200px;
+    height: 200px;
+    bottom: 50px;
+    right: 100px;
+  }
+
+  .circle-3 {
+    width: 150px;
+    height: 150px;
+    top: 200px;
+    right: -50px;
+  }
+
+  .footer {
+    text-align: center;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.7);
+    z-index: 10;
+    margin-top: 15px;
+  }
+</style>
+
+<!-- Decorative elements -->
+<div class="decorative-circle circle-1"></div>
+<div class="decorative-circle circle-2"></div>
+<div class="decorative-circle circle-3"></div>
+
+<!-- Header -->
+<div class="header">
+  <h1>Topics Mentioned but Not Deep-Dived</h1>
+  <div class="subtitle">
+    A glimpse into advanced concepts for future exploration
+  </div>
+</div>
+
+<!-- Main content -->
+<div class="content-box">
+  <h2>Beyond Today's Fundamentals</h2>
+
+  <div class="topics-grid">
+    <div class="topic-category">
+      <h3><i class="fas fa-code"></i> HTML Topics</h3>
+      <ul>
+        <li><i class="fas fa-video"></i> Media tags: audio, video</li>
+        <li><i class="fas fa-external-link-alt"></i> Iframes</li>
+        <li><i class="fas fa-universal-access"></i> Accessibility</li>
+        <li>
+          <i class="fas fa-copyright"></i> HTML entities (&amp;copy;,
+          &amp;nbsp;, etc.)
+        </li>
+      </ul>
+    </div>
+
+    <div class="topic-category">
+      <h3><i class="fas fa-paint-brush"></i> CSS Topics</h3>
+      <ul>
+        <li><i class="fas fa-user-circle"></i> Pseudo-Classes & Elements</li>
+        <li>
+          <i class="fas fa-mobile-alt"></i> Media Queries (Tailwind focus)
+        </li>
+        <li><i class="fas fa-exchange-alt"></i> Transitions & Animations</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  <p>The web development journey is vast and exciting!</p>
+</div>

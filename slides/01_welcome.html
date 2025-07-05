@@ -1,0 +1,68 @@
+<style>
+  .instructor {
+    font-size: 28px;
+    margin: 20px 15px 0;
+    color: #fdbb2d;
+  }
+  .details {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  .image-container {
+    margin: 30px 0;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+  }
+  .image-container img {
+    max-height: 200px;
+    border-radius: 999px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+  }
+  .image-container img:hover {
+    transform: scale(1.05);
+  }
+  .content-box h1.title {
+    font-size: 32px;
+    text-align: center;
+  }
+  .subtitle {
+    font-size: 28px;
+  }
+</style>
+<!-- Decorative elements -->
+<div class="decorative-circle circle-1"></div>
+<div class="decorative-circle circle-2"></div>
+<div class="decorative-circle circle-3"></div>
+<div class="decorative-circle circle-4"></div>
+
+<!-- Main content -->
+<div class="content-box">
+  <h1 class="title">Welcome to the Full Stack Web Development Course</h1>
+  <div class="subtitle instructor">
+    <i class="fas fa-chalkboard-teacher" style="padding-right: 10px"></i
+    >Instructors
+  </div>
+
+  <div class="image-container">
+    <img src="/src/images/abdulrahman.png" alt="Abdulrahman" />
+    <img src="/src/images/youssef.jpeg" alt="Youssef" />
+  </div>
+
+  <div class="details">
+    <p><i class="far fa-clock"></i> Duration: 6 - 26 JULY</p>
+    <p>
+      <i class="fas fa-calendar-alt"></i> Schedule: Sunday, Tuesday, Thursday,
+      Saturday
+    </p>
+    <p><i class="fas fa-graduation-cap"></i> Level: Beginner-Friendly</p>
+  </div>
+</div>

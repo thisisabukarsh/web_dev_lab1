@@ -1,0 +1,184 @@
+<style>
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .header {
+    position: relative;
+    z-index: 10;
+  }
+
+  h1 {
+    font-size: 64px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    background: linear-gradient(to right, #ffffff, #f0f0f0);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  .subtitle {
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .content-box {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    z-index: 10;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .content-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  }
+
+  h2 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #fdbb2d;
+    text-align: center;
+  }
+
+  .advice-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .advice-list li {
+    font-size: 20px;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+  }
+
+  .advice-list li:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(10px);
+  }
+
+  .advice-list li i {
+    margin-right: 20px;
+    font-size: 30px;
+    color: #fdbb2d;
+    width: 40px;
+    text-align: center;
+  }
+
+  .quote {
+    font-style: italic;
+    text-align: center;
+    font-size: 22px;
+    margin: 30px 0;
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .quote::before,
+  .quote::after {
+    content: '"';
+    color: #fdbb2d;
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  .decorative-circle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    z-index: 1;
+  }
+
+  .circle-1 {
+    width: 300px;
+    height: 300px;
+    top: -100px;
+    left: -100px;
+  }
+
+  .circle-2 {
+    width: 200px;
+    height: 200px;
+    bottom: 50px;
+    right: 100px;
+  }
+
+  .circle-3 {
+    width: 150px;
+    height: 150px;
+    top: 200px;
+    right: -50px;
+  }
+
+  .footer {
+    text-align: center;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.7);
+    z-index: 10;
+  }
+</style>
+
+<!-- Decorative elements -->
+<div class="decorative-circle circle-5"></div>
+<div class="decorative-circle circle-6"></div>
+<div class="decorative-circle circle-7"></div>
+<div class="decorative-circle circle-8"></div>
+
+<!-- Header -->
+<div class="header">
+  <h1>Youseef's Advice</h1>
+  <div class="subtitle">Keys to Success in Web Development</div>
+</div>
+
+<!-- Main content -->
+<div class="content-box">
+  <h2>Learning Strategies That Work</h2>
+
+  <ul class="advice-list">
+    <li>
+      <i class="fas fa-sync-alt"></i>
+      <span>Repetition is key - practice the same concepts multiple times</span>
+    </li>
+    <li>
+      <i class="fas fa-keyboard"></i>
+      <span>Code by hand, not just copy-paste - build muscle memory</span>
+    </li>
+    <li>
+      <i class="fas fa-brain"></i>
+      <span>Learn how to think, not just do - understand the "why"</span>
+    </li>
+  </ul>
+
+  <div class="quote">
+    The difference between a good developer and a great one is understanding the
+    fundamentals deeply.
+  </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  <p>Apply these principles to accelerate your learning journey</p>
+</div>

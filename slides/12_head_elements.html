@@ -1,0 +1,226 @@
+<style>
+  .header {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+
+  h1 {
+    font-size: 45px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    background: linear-gradient(to right, #ffffff, #f0f0f0);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  .subtitle {
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .content-box {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    z-index: 10;
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: space-evenly;
+  }
+
+  .content-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  }
+
+  h2 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #fdbb2d;
+    text-align: center;
+  }
+
+  .elements-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 15px;
+  }
+
+  .element-card {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .element-card i {
+    font-size: 35px;
+    color: #fdbb2d;
+    margin-bottom: 8px;
+  }
+
+  .element-card h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+
+  .element-card p {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  .code-example {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    padding: 8px;
+    font-family: "Courier New", monospace;
+    font-size: 12px;
+    color: #f8f9fa;
+    margin-top: 8px;
+    text-align: left;
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .tag {
+    color: #61dafb;
+  }
+
+  .attribute {
+    color: #f8c555;
+  }
+
+  .value {
+    color: #98c379;
+  }
+
+  .decorative-circle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    z-index: 1;
+  }
+
+  .circle-1 {
+    width: 300px;
+    height: 300px;
+    top: -100px;
+    left: -100px;
+  }
+
+  .circle-2 {
+    width: 200px;
+    height: 200px;
+    bottom: 50px;
+    right: 100px;
+  }
+
+  .circle-3 {
+    width: 150px;
+    height: 150px;
+    top: 200px;
+    right: -50px;
+  }
+
+  .footer {
+    text-align: center;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    z-index: 10;
+    margin-top: 10px;
+  }
+</style>
+<!-- Decorative elements -->
+<div class="decorative-circle circle-1"></div>
+<div class="decorative-circle circle-2"></div>
+<div class="decorative-circle circle-3"></div>
+
+<!-- Header -->
+<div class="header">
+  <h1>Head Elements</h1>
+  <div class="subtitle">The unseen but essential part of your webpage</div>
+</div>
+
+<!-- Main content -->
+<div class="content-box">
+  <h2>What goes in the &lt;head&gt;?</h2>
+
+  <p class="text-base text-center mb-3">
+    The <code>&lt;head&gt;</code> section contains metadata about the document,
+    not visible on the page itself but crucial for browsers and search engines.
+  </p>
+
+  <div class="elements-grid">
+    <div class="element-card">
+      <i class="fas fa-heading"></i>
+      <h3>&lt;title&gt;</h3>
+      <p>Document title.</p>
+      <div class="code-example">
+        <span class="tag">&lt;title&gt;</span>My Site<span class="tag"
+          >&lt;/title&gt;</span
+        >
+      </div>
+    </div>
+
+    <div class="element-card">
+      <i class="fas fa-info-circle"></i>
+      <h3>&lt;meta&gt;</h3>
+      <p>Metadata (charset, viewport).</p>
+      <div class="code-example">
+        <span class="tag">&lt;meta</span> <span class="attribute">charset=</span
+        ><span class="value">"UTF-8"</span><span class="tag">&gt;</span>
+      </div>
+    </div>
+
+    <div class="element-card">
+      <i class="fas fa-link"></i>
+      <h3>&lt;link&gt;</h3>
+      <p>External resources (CSS, Fonts).</p>
+      <div class="code-example">
+        <span class="tag">&lt;link</span> <span class="attribute">rel=</span
+        ><span class="value">"stylesheet"</span>
+        <span class="attribute">href=</span
+        ><span class="value">"style.css"</span><span class="tag">&gt;</span>
+      </div>
+    </div>
+
+    <div class="element-card">
+      <i class="fas fa-font"></i>
+      <h3>Google Fonts</h3>
+      <p>Integrate custom fonts.</p>
+      <div class="code-example">
+        <span class="tag">&lt;link</span> <span class="attribute">href=</span
+        ><span class="value">"..."</span><span class="tag">&gt;</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  <p>
+    The &lt;head&gt; section is vital for SEO, responsiveness, and external
+    resource loading
+  </p>
+</div>

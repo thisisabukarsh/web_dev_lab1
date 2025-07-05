@@ -1,0 +1,333 @@
+<style>
+  .flex-table {
+    background: rgba(255, 255, 255, 0.07);
+    border-radius: 12px;
+    padding: 16px;
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .flex-row {
+    display: grid;
+    grid-template-columns: 140px 1fr 1fr;
+    gap: 10px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    transition: background 0.3s;
+  }
+
+  .flex-row:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .flex-row .label {
+    color: #fdbb2d;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+
+  .flex-row .value {
+    color: #ffffff;
+    font-family: "Courier New", monospace;
+  }
+
+  .flex-row .desc {
+    color: #dddddd;
+  }
+
+  .header {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+
+  h1 {
+    font-size: 45px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    background: linear-gradient(to right, #ffffff, #f0f0f0);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  .subtitle {
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .content-box {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    z-index: 10;
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: space-evenly;
+  }
+
+  .content-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  }
+
+  h2 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #fdbb2d;
+    text-align: center;
+  }
+
+  .elements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .element-card {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .element-card i {
+    font-size: 35px;
+    color: #fdbb2d;
+    margin-bottom: 8px;
+  }
+
+  .element-card h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+
+  .element-card p {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  .code-example {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    padding: 8px;
+    font-family: "Courier New", monospace;
+    font-size: 12px;
+    color: #f8f9fa;
+    margin-top: 8px;
+    text-align: left;
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .tag {
+    color: #61dafb;
+  }
+
+  .attribute {
+    color: #f8c555;
+  }
+
+  .value {
+    color: #98c379;
+  }
+
+  .decorative-circle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    z-index: 1;
+  }
+
+  .circle-1 {
+    width: 300px;
+    height: 300px;
+    top: -100px;
+    left: -100px;
+  }
+
+  .circle-2 {
+    width: 200px;
+    height: 200px;
+    bottom: 50px;
+    right: 100px;
+  }
+
+  .circle-3 {
+    width: 150px;
+    height: 150px;
+    top: 200px;
+    right: -50px;
+  }
+
+  .footer {
+    text-align: center;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    z-index: 10;
+    margin-top: 10px;
+  }
+  .slide-container {
+    overflow-y: scroll;
+  }
+</style>
+<!-- Header -->
+<div class="header">
+  <h1>Flexbox Properties</h1>
+  <div class="subtitle">
+    Master layout with ease using these essential tools
+  </div>
+</div>
+
+<!-- Main content -->
+<div class="content-box">
+  <h2>Flex Container & Item Properties</h2>
+
+  <p class="text-base text-center mb-3">
+    Below is a categorized list of all <strong>Flexbox properties</strong> .
+    <a
+      href="https://cssgridgarden.com/"
+      target="_blank"
+      style="text-decoration: underline; color: #fdbb2d"
+      >Mini-Game</a
+    >
+  </p>
+
+  <!-- Flex Container Properties -->
+  <h3 style="color: #fdbb2d; margin-top: 20px">
+    <i class="fas fa-box"></i> Flex Container Properties
+  </h3>
+
+  <div class="elements-grid">
+    <div class="element-card">
+      <i class="fas fa-code"></i>
+      <h3>display</h3>
+      <p>flex | inline-flex</p>
+      <div class="code-example">display: flex;</div>
+    </div>
+
+    <div class="element-card">
+      <i class="fas fa-directions"></i>
+      <h3>flex-direction</h3>
+      <p>row | column | reverse</p>
+      <div class="code-example">flex-direction: row;</div>
+    </div>
+
+    <div class="element-card">
+      <i class="fas fa-layer-group"></i>
+      <h3>flex-wrap</h3>
+      <p>nowrap | wrap | reverse</p>
+      <div class="code-example">flex-wrap: wrap;</div>
+    </div>
+
+    <div class="element-card">
+      <i class="fas fa-compress-arrows-alt"></i>
+      <h3>flex-flow</h3>
+      <p>Shorthand of direction & wrap</p>
+      <div class="code-example">flex-flow: row wrap;</div>
+    </div>
+
+    <div class="element-card">
+      <i class="fas fa-align-center"></i>
+      <h3>justify-content</h3>
+      <p>Main axis alignment</p>
+      <div class="code-example">justify-content: space-between;</div>
+    </div>
+
+    <div class="element-card">
+      <i class="fas fa-arrows-alt-v"></i>
+      <h3>align-items</h3>
+      <p>Cross axis alignment</p>
+      <div class="code-example">align-items: center;</div>
+    </div>
+
+    <div class="element-card">
+      <i class="fas fa-align-justify"></i>
+      <h3>align-content</h3>
+      <p>Multi-line alignment</p>
+      <div class="code-example">align-content: stretch;</div>
+    </div>
+  </div>
+
+  <!-- Flex Item Properties -->
+  <h3 style="color: #fdbb2d; margin-top: 30px">
+    <i class="fas fa-cube"></i> Flex Item Properties
+  </h3>
+
+  <div class="elements-grid">
+    <div class="element-card">
+      <i class="fas fa-sort-amount-down"></i>
+      <h3>order</h3>
+      <p>Controls item order</p>
+      <div class="code-example">order: 1;</div>
+    </div>
+
+    <div class="element-card">
+      <i class="fas fa-expand-alt"></i>
+      <h3>flex-grow</h3>
+      <p>Allow item to grow</p>
+      <div class="code-example">flex-grow: 1;</div>
+    </div>
+
+    <div class="element-card">
+      <i class="fas fa-compress-alt"></i>
+      <h3>flex-shrink</h3>
+      <p>Allow item to shrink</p>
+      <div class="code-example">flex-shrink: 1;</div>
+    </div>
+
+    <div class="element-card">
+      <i class="fas fa-ruler-horizontal"></i>
+      <h3>flex-basis</h3>
+      <p>Initial size of item</p>
+      <div class="code-example">flex-basis: 100px;</div>
+    </div>
+
+    <div class="element-card">
+      <i class="fas fa-stream"></i>
+      <h3>flex</h3>
+      <p>Shorthand for grow/shrink/basis</p>
+      <div class="code-example">flex: 1 1 auto;</div>
+    </div>
+
+    <div class="element-card">
+      <i class="fas fa-align-center"></i>
+      <h3>align-self</h3>
+      <p>Override cross alignment</p>
+      <div class="code-example">align-self: flex-end;</div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  <p>
+    Flexbox is powerful and elegant — practice each property to master
+    responsive layouts.
+  </p>
+</div>
