@@ -19,7 +19,7 @@ body {
   /* justify-content: space-between; */
   padding: 30px;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 @keyframes gradient {
