@@ -1,0 +1,363 @@
+<style>
+  .flex-table {
+    background: rgba(255, 255, 255, 0.07);
+    border-radius: 12px;
+    padding: 16px;
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .flex-row {
+    display: grid;
+    grid-template-columns: 140px 1fr 1fr;
+    gap: 10px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    transition: background 0.3s;
+  }
+
+  .flex-row:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .flex-row .label {
+    color: #fdbb2d;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+
+  .flex-row .value {
+    color: #ffffff;
+    font-family: "Courier New", monospace;
+  }
+
+  .flex-row .desc {
+    color: #dddddd;
+  }
+
+  .header {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+
+  h1 {
+    font-size: 45px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    background: linear-gradient(to right, #ffffff, #f0f0f0);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  .subtitle {
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .content-box {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    z-index: 10;
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: space-evenly;
+  }
+
+  .content-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  }
+
+  h2 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #fdbb2d;
+    text-align: center;
+  }
+
+  .elements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .element-card {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .element-card i {
+    font-size: 35px;
+    color: #fdbb2d;
+    margin-bottom: 8px;
+  }
+
+  .element-card h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+
+  .element-card p {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  .code-example {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    padding: 8px;
+    font-family: "Courier New", monospace;
+    font-size: 12px;
+    color: #f8f9fa;
+    margin-top: 8px;
+    text-align: left;
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .tag {
+    color: #61dafb;
+  }
+
+  .attribute {
+    color: #f8c555;
+  }
+
+  .value {
+    color: #98c379;
+  }
+
+  .decorative-circle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    z-index: 1;
+  }
+
+  .circle-1 {
+    width: 300px;
+    height: 300px;
+    top: -100px;
+    left: -100px;
+  }
+
+  .circle-2 {
+    width: 200px;
+    height: 200px;
+    bottom: 50px;
+    right: 100px;
+  }
+
+  .circle-3 {
+    width: 150px;
+    height: 150px;
+    top: 200px;
+    right: -50px;
+  }
+
+  .footer {
+    text-align: center;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    z-index: 10;
+    margin-top: 10px;
+  }
+
+  .slide-container {
+    overflow-y: scroll;
+  }
+</style>
+
+<!-- Header -->
+<div class="header">
+  <h1>Most Important CSS Properties</h1>
+  <div class="subtitle">
+    Essential building blocks for every web project :
+    <a
+      style="text-decoration: underline; color: #fdbb2d"
+      href="https://www.w3schools.com/css/default.asp"
+      target="_blank"
+      >check this
+    </a>
+  </div>
+</div>
+
+<!-- Main content -->
+<div class="content-box">
+  <h2>Box Model</h2>
+  <div class="elements-grid">
+    <div class="element-card">
+      <i class="fas fa-border-style"></i>
+      <h3>margin</h3>
+      <p>Space outside element</p>
+      <div class="code-example">margin: 16px;</div>
+    </div>
+    <div class="element-card">
+      <i class="fas fa-border-none"></i>
+      <h3>padding</h3>
+      <p>Space inside element</p>
+      <div class="code-example">padding: 16px;</div>
+    </div>
+    <div class="element-card">
+      <i class="fas fa-border-all"></i>
+      <h3>border</h3>
+      <p>Element outline</p>
+      <div class="code-example">border: 1px solid #000;</div>
+    </div>
+    <div class="element-card">
+      <i class="fas fa-expand"></i>
+      <h3>width</h3>
+      <p>Element width</p>
+      <div class="code-example">width: 100%;</div>
+    </div>
+    <div class="element-card">
+      <i class="fas fa-expand-alt"></i>
+      <h3>height</h3>
+      <p>Element height</p>
+      <div class="code-example">height: 50px;</div>
+    </div>
+  </div>
+
+  <h2>Typography</h2>
+  <div class="elements-grid">
+    <div class="element-card">
+      <i class="fas fa-font"></i>
+      <h3>font-size</h3>
+      <p>Text size</p>
+      <div class="code-example">font-size: 16px;</div>
+    </div>
+    <div class="element-card">
+      <i class="fas fa-font"></i>
+      <h3>font-family</h3>
+      <p>Text style</p>
+      <div class="code-example">font-family: Arial, sans-serif;</div>
+    </div>
+    <div class="element-card">
+      <i class="fas fa-align-center"></i>
+      <h3>text-align</h3>
+      <p>Text alignment</p>
+      <div class="code-example">text-align: center;</div>
+    </div>
+    <div class="element-card">
+      <i class="fas fa-text-height"></i>
+      <h3>line-height</h3>
+      <p>Line spacing</p>
+      <div class="code-example">line-height: 1.5;</div>
+    </div>
+  </div>
+
+  <h2>Colors & Backgrounds</h2>
+  <div class="elements-grid">
+    <div class="element-card">
+      <i class="fas fa-fill-drip"></i>
+      <h3>color</h3>
+      <p>Text color</p>
+      <div class="code-example">color: #333;</div>
+    </div>
+    <div class="element-card">
+      <i class="fas fa-fill"></i>
+      <h3>background-color</h3>
+      <p>Background color</p>
+      <div class="code-example">background-color: #f0f0f0;</div>
+    </div>
+    <div class="element-card">
+      <i class="fas fa-image"></i>
+      <h3>background-image</h3>
+      <p>Image background</p>
+      <div class="code-example">background-image: url('bg.jpg');</div>
+    </div>
+    <div class="element-card">
+      <i class="fas fa-expand"></i>
+      <h3>background-size</h3>
+      <p>Background sizing</p>
+      <div class="code-example">background-size: cover;</div>
+    </div>
+  </div>
+
+  <h2>Positioning</h2>
+  <div class="elements-grid">
+    <div class="element-card">
+      <i class="fas fa-crosshairs"></i>
+      <h3>position</h3>
+      <p>Position method</p>
+      <div class="code-example">position: absolute;</div>
+    </div>
+    <div class="element-card">
+      <i class="fas fa-arrows-alt"></i>
+      <h3>top / right / bottom / left</h3>
+      <p>Element offsets</p>
+      <div class="code-example">top: 10px; left: 20px;</div>
+    </div>
+    <div class="element-card">
+      <i class="fas fa-layer-group"></i>
+      <h3>z-index</h3>
+      <p>Stack order</p>
+      <div class="code-example">z-index: 100;</div>
+    </div>
+  </div>
+
+  <h2>Visual Effects</h2>
+  <div class="elements-grid">
+    <div class="element-card">
+      <i class="fas fa-magic"></i>
+      <h3>box-shadow</h3>
+      <p>Shadow around elements</p>
+      <div class="code-example">box-shadow: 0 4px 8px rgba(0,0,0,0.2);</div>
+    </div>
+    <div class="element-card">
+      <i class="fas fa-sync-alt"></i>
+      <h3>transition</h3>
+      <p>Animate property changes</p>
+      <div class="code-example">transition: all 0.3s ease;</div>
+    </div>
+    <div class="element-card">
+      <i class="fas fa-expand-arrows-alt"></i>
+      <h3>transform</h3>
+      <p>Move, scale, rotate</p>
+      <div class="code-example">transform: scale(1.1);</div>
+    </div>
+    <div class="element-card">
+      <i class="fas fa-low-vision"></i>
+      <h3>opacity</h3>
+      <p>Transparency level</p>
+      <div class="code-example">opacity: 0.5;</div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  <p>
+    Master these CSS properties to build clean, responsive, and modern designs.
+  </p>
+</div>

@@ -1,0 +1,402 @@
+<style>
+  .flex-table {
+    background: rgba(255, 255, 255, 0.07);
+    border-radius: 12px;
+    padding: 16px;
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .flex-row {
+    display: grid;
+    grid-template-columns: 140px 1fr 1fr;
+    gap: 10px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    transition: background 0.3s;
+  }
+
+  .flex-row:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .flex-row .label {
+    color: #fdbb2d;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+
+  .flex-row .value {
+    color: #ffffff;
+    font-family: "Courier New", monospace;
+  }
+
+  .flex-row .desc {
+    color: #dddddd;
+  }
+
+  .header {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+
+  h1 {
+    font-size: 45px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    background: linear-gradient(to right, #ffffff, #f0f0f0);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  .subtitle {
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .content-box {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    z-index: 10;
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: space-evenly;
+  }
+
+  .content-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  }
+
+  h2 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #fdbb2d;
+    text-align: center;
+  }
+
+  .elements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .element-card {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .element-card i {
+    font-size: 35px;
+    color: #fdbb2d;
+    margin-bottom: 8px;
+  }
+
+  .element-card h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+
+  .element-card p {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  .code-example {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    padding: 8px;
+    font-family: "Courier New", monospace;
+    font-size: 12px;
+    color: #f8f9fa;
+    margin-top: 8px;
+    text-align: left;
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .tag {
+    color: #61dafb;
+  }
+
+  .attribute {
+    color: #f8c555;
+  }
+
+  .value {
+    color: #98c379;
+  }
+
+  .decorative-circle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    z-index: 1;
+  }
+
+  .circle-1 {
+    width: 300px;
+    height: 300px;
+    top: -100px;
+    left: -100px;
+  }
+
+  .circle-2 {
+    width: 200px;
+    height: 200px;
+    bottom: 50px;
+    right: 100px;
+  }
+
+  .circle-3 {
+    width: 150px;
+    height: 150px;
+    top: 200px;
+    right: -50px;
+  }
+
+  .footer {
+    text-align: center;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    z-index: 10;
+    margin-top: 10px;
+  }
+
+  .slide-container {
+    overflow-y: scroll;
+  }
+</style>
+
+<!-- Header -->
+<div class="header">
+  <h1>Most Important HTML Tags</h1>
+  <div class="subtitle">
+    Essential building blocks for every web project :
+    <a
+      style="text-decoration: underline; color: #fdbb2d"
+      href="https://www.w3schools.com/html/default.asp"
+      target="_blank"
+      >check this
+    </a>
+  </div>
+</div>
+
+<!-- Main content -->
+<div class="content-box">
+  <h2>Structural Tags</h2>
+  <div class="elements-grid">
+    <div class="element-card">
+      <i class="fas fa-code"></i>
+      <h3>&lt;html&gt;</h3>
+      <p>Root of the HTML document</p>
+      <div class="code-example">&lt;html lang="en"&gt;&lt;/html&gt;</div>
+    </div>
+    <div class="element-card">
+      <i class="fas fa-code"></i>
+      <h3>&lt;head&gt;</h3>
+      <p>Metadata, links, title</p>
+      <div class="code-example">
+        &lt;head&gt;&lt;title&gt;Page&lt;/title&gt;&lt;/head&gt;
+      </div>
+    </div>
+    <div class="element-card">
+      <i class="fas fa-eye"></i>
+      <h3>&lt;body&gt;</h3>
+      <p>Main content container</p>
+      <div class="code-example">&lt;body&gt;...&lt;/body&gt;</div>
+    </div>
+    <div class="element-card">
+      <i class="fas fa-heading"></i>
+      <h3>&lt;h1&gt; - &lt;h6&gt;</h3>
+      <p>Headings levels 1 to 6</p>
+      <div class="code-example">&lt;h1&gt;Title&lt;/h1&gt;</div>
+    </div>
+    <div class="element-card">
+      <i class="fas fa-paragraph"></i>
+      <h3>&lt;p&gt;</h3>
+      <p>Paragraph of text</p>
+      <div class="code-example">&lt;p&gt;Hello World&lt;/p&gt;</div>
+    </div>
+  </div>
+
+  <h2>Grouping & Layout</h2>
+  <div class="elements-grid">
+    <div class="element-card">
+      <i class="fas fa-box"></i>
+      <h3>&lt;div&gt;</h3>
+      <p>Generic container for layout</p>
+      <div class="code-example">&lt;div&gt;Content&lt;/div&gt;</div>
+    </div>
+    <div class="element-card">
+      <i class="fas fa-box-open"></i>
+      <h3>&lt;span&gt;</h3>
+      <p>Inline container</p>
+      <div class="code-example">&lt;span&gt;Text&lt;/span&gt;</div>
+    </div>
+    <div class="element-card">
+      <i class="fas fa-image"></i>
+      <h3>&lt;img&gt;</h3>
+      <p>Embeds images</p>
+      <div class="code-example">&lt;img src="image.jpg" alt="desc" /&gt;</div>
+    </div>
+    <div class="element-card">
+      <i class="fas fa-link"></i>
+      <h3>&lt;a&gt;</h3>
+      <p>Hyperlinks to other pages</p>
+      <div class="code-example">&lt;a href="#"&gt;Link&lt;/a&gt;</div>
+    </div>
+    <div class="element-card">
+      <i class="fas fa-list"></i>
+      <h3>&lt;ul&gt; / &lt;ol&gt; / &lt;li&gt;</h3>
+      <p>Lists: unordered, ordered, list items</p>
+      <div class="code-example">
+        &lt;ul&gt;&lt;li&gt;Item&lt;/li&gt;&lt;/ul&gt;
+      </div>
+    </div>
+  </div>
+
+  <h2>Forms & Inputs</h2>
+  <div class="elements-grid">
+    <div class="element-card">
+      <i class="fas fa-keyboard"></i>
+      <h3>&lt;form&gt;</h3>
+      <p>Form container</p>
+      <div class="code-example">&lt;form action="#"&gt;...&lt;/form&gt;</div>
+    </div>
+    <div class="element-card">
+      <i class="fas fa-i-cursor"></i>
+      <h3>&lt;input&gt;</h3>
+      <p>Input fields</p>
+      <div class="code-example">
+        &lt;input type="text" placeholder="Enter" /&gt;
+      </div>
+    </div>
+    <div class="element-card">
+      <i class="fas fa-caret-square-down"></i>
+      <h3>&lt;select&gt; / &lt;option&gt;</h3>
+      <p>Dropdown menus</p>
+      <div class="code-example">
+        &lt;select&gt;&lt;option&gt;One&lt;/option&gt;&lt;/select&gt;
+      </div>
+    </div>
+    <div class="element-card">
+      <i class="fas fa-align-left"></i>
+      <h3>&lt;textarea&gt;</h3>
+      <p>Multi-line text input</p>
+      <div class="code-example">&lt;textarea&gt;Message&lt;/textarea&gt;</div>
+    </div>
+    <div class="element-card">
+      <i class="fas fa-check"></i>
+      <h3>&lt;button&gt;</h3>
+      <p>Clickable button</p>
+      <div class="code-example">&lt;button&gt;Click&lt;/button&gt;</div>
+    </div>
+  </div>
+
+  <h2>Media & Embeds</h2>
+  <div class="elements-grid">
+    <div class="element-card">
+      <i class="fas fa-video"></i>
+      <h3>&lt;video&gt;</h3>
+      <p>Embeds video content</p>
+      <div class="code-example">
+        &lt;video src="video.mp4" controls&gt;&lt;/video&gt;
+      </div>
+    </div>
+    <div class="element-card">
+      <i class="fas fa-volume-up"></i>
+      <h3>&lt;audio&gt;</h3>
+      <p>Embeds audio content</p>
+      <div class="code-example">
+        &lt;audio src="sound.mp3" controls&gt;&lt;/audio&gt;
+      </div>
+    </div>
+    <div class="element-card">
+      <i class="fas fa-map-marker-alt"></i>
+      <h3>&lt;iframe&gt;</h3>
+      <p>Embeds external content</p>
+      <div class="code-example">
+        &lt;iframe src="https://example.com"&gt;&lt;/iframe&gt;
+      </div>
+    </div>
+  </div>
+
+  <h2>Semantic Elements</h2>
+  <div class="elements-grid">
+    <div class="element-card">
+      <i class="fas fa-home"></i>
+      <h3>&lt;header&gt;</h3>
+      <p>Introductory content or navigation</p>
+      <div class="code-example">&lt;header&gt;Site header&lt;/header&gt;</div>
+    </div>
+    <div class="element-card">
+      <i class="fas fa-align-center"></i>
+      <h3>&lt;main&gt;</h3>
+      <p>Main content area</p>
+      <div class="code-example">&lt;main&gt;Content&lt;/main&gt;</div>
+    </div>
+    <div class="element-card">
+      <i class="fas fa-columns"></i>
+      <h3>&lt;section&gt;</h3>
+      <p>Thematic grouping of content</p>
+      <div class="code-example">&lt;section&gt;Topic&lt;/section&gt;</div>
+    </div>
+    <div class="element-card">
+      <i class="fas fa-info-circle"></i>
+      <h3>&lt;article&gt;</h3>
+      <p>Independent article or content unit</p>
+      <div class="code-example">&lt;article&gt;Blog post&lt;/article&gt;</div>
+    </div>
+    <div class="element-card">
+      <i class="fas fa-info"></i>
+      <h3>&lt;aside&gt;</h3>
+      <p>Sidebar or complementary content</p>
+      <div class="code-example">&lt;aside&gt;Extra info&lt;/aside&gt;</div>
+    </div>
+    <div class="element-card">
+      <i class="fas fa-shoe-prints"></i>
+      <h3>&lt;footer&gt;</h3>
+      <p>Footer content</p>
+      <div class="code-example">&lt;footer&gt;Site footer&lt;/footer&gt;</div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  <p>
+    These tags are the foundation of every HTML page — practice combining them
+    to create rich, accessible web experiences.
+  </p>
+</div>

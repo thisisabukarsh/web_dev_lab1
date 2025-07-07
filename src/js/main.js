@@ -17,14 +17,16 @@ const slides = [
   "slides/16_good_vs_bad_css.html",
   "slides/17_break.html",
   "slides/18_project_goal.html",
-  // "slides/19_project_requirements.html",
-  // "slides/20_flex_properties.html",
-  // "slides/21_flex-box.html",
-  // "slides/22_grid_properties.html",
-  // "slides/23_grid.html",
-  // "slides/24_topics_not_deep_dived.html",
+  "slides/19_project_requirements.html",
+  "slides/20_flex_properties.html",
+  "slides/21_flex-box.html",
+  "slides/22_grid_properties.html",
+  "slides/23_grid.html",
+  "slides/24_topics_not_deep_dived.html",
   "slides/25_homework_assignment.html",
   "slides/26_great_job_today.html",
+  "slides/27_htmlTags.html",
+  "slides/28_css_prop.html",
 ];
 
 const noTransitionSlides = [20, 22];
